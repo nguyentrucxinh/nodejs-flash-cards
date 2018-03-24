@@ -1,3 +1,4 @@
+// User
 const { authenticate } = require('./users/authenticate')
 const { confirmResetPassword } = require('./users/confirmResetPassword')
 const { confirmSignUp } = require('./users/confirmSignUp')
@@ -7,6 +8,14 @@ const { forgotPassword } = require('./users/forgotPassword')
 const { signUp } = require('./users/signUp')
 const { testAxios } = require('./users/testAxios')
 const { findUserByEmail } = require('./users/findUserByEmail')
+
+// Card
+const { create } = require('./cards/create')
+const { update } = require('./cards/update')
+const { deleteCard } = require('./cards/deleteCard')
+const { findAll } = require('./cards/findAll')
+const { findById } = require('./cards/findById')
+const { findRandom } = require('./cards/findRandom')
 
 const services = {
   users: {
@@ -19,6 +28,14 @@ const services = {
     signUp,
     testAxios,
     findUserByEmail
+  },
+  cards: {
+    create,
+    update,
+    deleteCard,
+    findAll,
+    findById,
+    findRandom
   }
 }
 

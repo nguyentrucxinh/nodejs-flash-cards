@@ -3,6 +3,7 @@ const router = express.Router()
 
 const { catchErrors } = require('../helpers/errorHandlers')
 const userEndpoint = require('../apis/userEndpoint')
+const cardEndpoint = require('../apis/cardEndpoint')
 const { getAuthorize } = require('../middlewares/authMiddleware')
 
 // Unprotected routes
@@ -12,6 +13,13 @@ router.post('/api/sign-up', catchErrors(userEndpoint.postSignUp))
 router.get('/api/confirm-sign-up', catchErrors(userEndpoint.getConfirmSignUp))
 router.post('/api/forgot-password', catchErrors(userEndpoint.postForgotPassword))
 router.get('/api/confirm-reset-password', catchErrors(userEndpoint.getConfirmResetPassword))
+
+router.post('/api/cards', catchErrors(cardEndpoint.create))
+router.put('/api/cards/:id', catchErrors(cardEndpoint.update))
+router.delete('/api/cards/:id', catchErrors(cardEndpoint.delete))
+router.get('/api/cards', catchErrors(cardEndpoint.getAll))
+router.get('/api/cards/random', catchErrors(cardEndpoint.getRandom))
+router.get('/api/cards/:id', catchErrors(cardEndpoint.getById))
 
 // Middlewares
 router.use(getAuthorize)
