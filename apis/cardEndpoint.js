@@ -2,12 +2,9 @@ const services = require('../services')
 const { SuccessResponse } = require('../helpers/responseHelpers')
 
 exports.createCard = async (req, res) => {
-  const type = req.body.type
-  const front = req.body.front
-  const back = req.body.back
-  const known = req.body.known
+  const data = req.body
 
-  const card = await services.cards.createCard(type, front, back, known)
+  const card = await services.cards.createCard(data)
 
   return res.json(
     new SuccessResponse.Builder()
