@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Card = mongoose.model('Card')
 const logger = require('../../helpers/loggerHelpers')
 
-exports.updateCard = async (id, type, front, back, known) => {
-  await Card.findByIdAndUpdate(id, { type, front, back, known })
+exports.updateCard = async (id, data) => {
+  await Card.findByIdAndUpdate(id, data)
   logger.info(`Card updated`)
 }

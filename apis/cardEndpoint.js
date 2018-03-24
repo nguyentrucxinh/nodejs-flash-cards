@@ -18,12 +18,9 @@ exports.createCard = async (req, res) => {
 
 exports.updateCard = async (req, res) => {
   const id = req.params.id
-  const type = req.body.type
-  const front = req.body.front
-  const back = req.body.back
-  const known = req.body.known
+  const data = req.body
 
-  await services.cards.updateCard(id, type, front, back, known)
+  await services.cards.updateCard(id, data)
 
   return res.json(
     new SuccessResponse.Builder()
