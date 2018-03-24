@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Card = mongoose.model('Card')
 const logger = require('../../helpers/loggerHelpers')
 
-exports.findRandom = async () => {
+exports.findCardRandom = async () => {
   const count = await Card.count()
 
   const random = Math.floor(Math.random() * count)

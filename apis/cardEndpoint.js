@@ -1,13 +1,13 @@
 const services = require('../services')
 const { SuccessResponse } = require('../helpers/responseHelpers')
 
-exports.create = async (req, res) => {
+exports.createCard = async (req, res) => {
   const type = req.body.type
   const front = req.body.front
   const back = req.body.back
   const known = req.body.known
 
-  const card = await services.cards.create(type, front, back, known)
+  const card = await services.cards.createCard(type, front, back, known)
 
   return res.json(
     new SuccessResponse.Builder()
@@ -16,14 +16,14 @@ exports.create = async (req, res) => {
   )
 }
 
-exports.update = async (req, res) => {
+exports.updateCard = async (req, res) => {
   const id = req.params.id
   const type = req.body.type
   const front = req.body.front
   const back = req.body.back
   const known = req.body.known
 
-  await services.cards.update(id, type, front, back, known)
+  await services.cards.updateCard(id, type, front, back, known)
 
   return res.json(
     new SuccessResponse.Builder()
@@ -31,7 +31,7 @@ exports.update = async (req, res) => {
   )
 }
 
-exports.delete = async (req, res) => {
+exports.deleteCard = async (req, res) => {
   const id = req.params.id
 
   await services.cards.deleteCard(id)
@@ -42,8 +42,8 @@ exports.delete = async (req, res) => {
   )
 }
 
-exports.getAll = async (req, res) => {
-  const cards = await services.cards.findAll()
+exports.getCards = async (req, res) => {
+  const cards = await services.cards.findCards()
 
   return res.json(
     new SuccessResponse.Builder()
@@ -52,10 +52,10 @@ exports.getAll = async (req, res) => {
   )
 }
 
-exports.getById = async (req, res) => {
+exports.getCardById = async (req, res) => {
   const id = req.params.id
 
-  const card = await services.cards.findById(id)
+  const card = await services.cards.findCardById(id)
 
   return res.json(
     new SuccessResponse.Builder()
@@ -64,8 +64,8 @@ exports.getById = async (req, res) => {
   )
 }
 
-exports.getRandom = async (req, res) => {
-  const card = await services.cards.findRandom()
+exports.getCardRandom = async (req, res) => {
+  const card = await services.cards.findCardRandom()
 
   return res.json(
     new SuccessResponse.Builder()

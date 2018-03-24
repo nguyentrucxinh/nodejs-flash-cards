@@ -14,12 +14,12 @@ router.get('/api/confirm-sign-up', catchErrors(userEndpoint.getConfirmSignUp))
 router.post('/api/forgot-password', catchErrors(userEndpoint.postForgotPassword))
 router.get('/api/confirm-reset-password', catchErrors(userEndpoint.getConfirmResetPassword))
 
-router.post('/api/cards', catchErrors(cardEndpoint.create))
-router.put('/api/cards/:id', catchErrors(cardEndpoint.update))
-router.delete('/api/cards/:id', catchErrors(cardEndpoint.delete))
-router.get('/api/cards', catchErrors(cardEndpoint.getAll))
-router.get('/api/cards/random', catchErrors(cardEndpoint.getRandom))
-router.get('/api/cards/:id', catchErrors(cardEndpoint.getById))
+router.post('/api/cards', catchErrors(cardEndpoint.createCard))
+router.put('/api/cards/:id', catchErrors(cardEndpoint.updateCard))
+router.delete('/api/cards/:id', catchErrors(cardEndpoint.deleteCard))
+router.get('/api/cards', catchErrors(cardEndpoint.getCards))
+router.get('/api/cards/random', catchErrors(cardEndpoint.getCardRandom))
+router.get('/api/cards/:id', catchErrors(cardEndpoint.getCardById))
 
 // Middlewares
 router.use(getAuthorize)

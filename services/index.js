@@ -10,12 +10,12 @@ const { testAxios } = require('./users/testAxios')
 const { findUserByEmail } = require('./users/findUserByEmail')
 
 // Card
-const { create } = require('./cards/create')
-const { update } = require('./cards/update')
+const { createCard } = require('./cards/createCard')
+const { updateCard } = require('./cards/updateCard')
 const { deleteCard } = require('./cards/deleteCard')
-const { findAll } = require('./cards/findAll')
-const { findById } = require('./cards/findById')
-const { findRandom } = require('./cards/findRandom')
+const { findCards } = require('./cards/findCards')
+const { findCardById } = require('./cards/findCardById')
+const { findCardRandom } = require('./cards/findCardRandom')
 
 const services = {
   users: {
@@ -30,12 +30,12 @@ const services = {
     findUserByEmail
   },
   cards: {
-    create,
-    update,
+    createCard,
+    updateCard,
     deleteCard,
-    findAll,
-    findById,
-    findRandom
+    findCards,
+    findCardById,
+    findCardRandom
   }
 }
 
