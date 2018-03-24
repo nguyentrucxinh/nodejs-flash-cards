@@ -1,0 +1,32 @@
+[
+    {
+        "type": 1,
+        "front": "1",
+        "back": "1",
+        "known": true
+    },
+    {
+        "type": 1,
+        "front": "2",
+        "back": "2",
+        "known": true
+    },
+    {
+        "type": 1,
+        "front": "3",
+        "back": "3",
+        "known": true
+    },
+    {
+        "type": 1,
+        "front": "4",
+        "back": "4",
+        "known": true
+    },
+    {
+        "type": 1,
+        "front": "5",
+        "back": "5",
+        "known": true
+    }
+]
