@@ -23,6 +23,6 @@ const cardSchema = new Schema({
     type: Boolean,
     required: 'Please supply a known'
   }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model('Card', cardSchema)
