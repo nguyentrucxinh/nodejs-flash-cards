@@ -19,6 +19,7 @@ const { findCards } = require('./cards/findCards')
 const { findCardById } = require('./cards/findCardById')
 const { findCardNextById } = require('./cards/findCardNextById')
 const { findCardPrevById } = require('./cards/findCardPrevById')
+const { findCardFirst } = require('./cards/findCardFirst')
 const { findCardRandom } = require('./cards/findCardRandom')
 
 const services = {
@@ -43,6 +44,7 @@ const services = {
     findCardById,
     findCardNextById,
     findCardPrevById,
+    findCardFirst,
     findCardRandom
   }
 }

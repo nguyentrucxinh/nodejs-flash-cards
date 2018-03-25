@@ -104,6 +104,16 @@ exports.getCardPrevById = async (req, res) => {
   )
 }
 
+exports.getCardFirst = async (req, res) => {
+  const card = await services.cards.findCardFirst()
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .withContent(card)
+      .build()
+  )
+}
+
 exports.getCardRandom = async (req, res) => {
   const card = await services.cards.findCardRandom()
 
