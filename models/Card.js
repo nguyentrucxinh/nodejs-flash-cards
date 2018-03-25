@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const mongoose_delete = require('mongoose-delete')
+
 const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
@@ -24,5 +26,7 @@ const cardSchema = new Schema({
     required: 'Please supply a known'
   }
 }, { timestamps: true })
+
+cardSchema.plugin(mongoose_delete, { deletedAt: true, deletedBy: true })
 
 module.exports = mongoose.model('Card', cardSchema)

@@ -27,6 +27,7 @@
     "juice": "^4.2.2",
     "md5": "^2.2.1",
     "mongoose": "^4.13.9",
+    "mongoose-delete": "^0.4.0",
     "morgan": "^1.9.0",
     "nodemailer": "^4.4.1",
     "pug": "^2.0.0-rc.4",

@@ -2,31 +2,31 @@
     {
         "type": 1,
         "front": "1",
-        "back": "1",
+        "back": "One",
         "known": true
     },
     {
         "type": 1,
         "front": "2",
-        "back": "2",
+        "back": "Two",
         "known": true
     },
     {
         "type": 1,
         "front": "3",
-        "back": "3",
+        "back": "Three",
         "known": true
     },
     {
-        "type": 1,
+        "type": 2,
         "front": "4",
-        "back": "4",
-        "known": true
+        "back": "Four",
+        "known": false
     },
     {
-        "type": 1,
+        "type": 2,
         "front": "5",
-        "back": "5",
-        "known": true
+        "back": "Five",
+        "known": false
     }
 ]

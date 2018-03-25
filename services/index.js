@@ -12,7 +12,9 @@ const { findUserByEmail } = require('./users/findUserByEmail')
 // Card
 const { createCard } = require('./cards/createCard')
 const { updateCard } = require('./cards/updateCard')
+const { removeCard } = require('./cards/removeCard')
 const { deleteCard } = require('./cards/deleteCard')
+const { restoreCard } = require('./cards/restoreCard')
 const { findCards } = require('./cards/findCards')
 const { findCardById } = require('./cards/findCardById')
 const { findCardRandom } = require('./cards/findCardRandom')
@@ -32,7 +34,9 @@ const services = {
   cards: {
     createCard,
     updateCard,
+    removeCard,
     deleteCard,
+    restoreCard,
     findCards,
     findCardById,
     findCardRandom
