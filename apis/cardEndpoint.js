@@ -80,6 +80,30 @@ exports.getCardById = async (req, res) => {
   )
 }
 
+exports.getCardNextById = async (req, res) => {
+  const id = req.params.id
+
+  const card = await services.cards.findCardNextById(id)
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .withContent(card)
+      .build()
+  )
+}
+
+exports.getCardPrevById = async (req, res) => {
+  const id = req.params.id
+
+  const card = await services.cards.findCardPrevById(id)
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .withContent(card)
+      .build()
+  )
+}
+
 exports.getCardRandom = async (req, res) => {
   const card = await services.cards.findCardRandom()
 

@@ -3,12 +3,8 @@ const mongoose = require('mongoose')
 const Card = mongoose.model('Card')
 const logger = require('../../helpers/loggerHelpers')
 
-exports.findCardRandom = async () => {
-  const count = await Card.count()
-
-  const random = Math.floor(Math.random() * count)
-
-  const card = await Card.findOne().skip(random)
+exports.findCardPrevById = async (id) => {
+  const card = await Card.findOne({ _id: { $lt: id } }).sort({ _id: -1 })
   logger.info(`Card found: ${card}`)
   return card
 }

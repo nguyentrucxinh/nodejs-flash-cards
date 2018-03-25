@@ -17,6 +17,8 @@ const { deleteCard } = require('./cards/deleteCard')
 const { restoreCard } = require('./cards/restoreCard')
 const { findCards } = require('./cards/findCards')
 const { findCardById } = require('./cards/findCardById')
+const { findCardNextById } = require('./cards/findCardNextById')
+const { findCardPrevById } = require('./cards/findCardPrevById')
 const { findCardRandom } = require('./cards/findCardRandom')
 
 const services = {
@@ -39,6 +41,8 @@ const services = {
     restoreCard,
     findCards,
     findCardById,
+    findCardNextById,
+    findCardPrevById,
     findCardRandom
   }
 }
