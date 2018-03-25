@@ -8,7 +8,7 @@ exports.findCardRandom = async () => {
 
   const random = Math.floor(Math.random() * count)
 
-  const card = await Card.findOne().skip(random)
+  const card = await Card.findOne({ deleted: false }).skip(random)
   logger.info(`Card found: ${card}`)
   return card
 }
