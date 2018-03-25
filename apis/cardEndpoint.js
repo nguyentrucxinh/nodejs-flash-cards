@@ -25,10 +25,32 @@ exports.updateCard = async (req, res) => {
   )
 }
 
+exports.removeCard = async (req, res) => {
+  const id = req.params.id
+
+  await services.cards.removeCard(id)
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .build()
+  )
+}
+
 exports.deleteCard = async (req, res) => {
   const id = req.params.id
 
   await services.cards.deleteCard(id)
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .build()
+  )
+}
+
+exports.restoreCard = async (req, res) => {
+  const id = req.params.id
+
+  await services.cards.restoreCard(id)
 
   return res.json(
     new SuccessResponse.Builder()

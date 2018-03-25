@@ -16,7 +16,9 @@ router.get('/api/confirm-reset-password', catchErrors(userEndpoint.getConfirmRes
 
 router.post('/api/cards', catchErrors(cardEndpoint.createCard))
 router.put('/api/cards/:id', catchErrors(cardEndpoint.updateCard))
+router.delete('/api/cards/remove/:id', catchErrors(cardEndpoint.removeCard))
 router.delete('/api/cards/:id', catchErrors(cardEndpoint.deleteCard))
+router.patch('/api/cards/restore/:id', catchErrors(cardEndpoint.restoreCard))
 router.get('/api/cards', catchErrors(cardEndpoint.getCards))
 router.get('/api/cards/random', catchErrors(cardEndpoint.getCardRandom))
 router.get('/api/cards/:id', catchErrors(cardEndpoint.getCardById))
