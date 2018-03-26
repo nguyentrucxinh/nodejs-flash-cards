@@ -11,13 +11,11 @@ const cardSchema = new Schema({
   }, /* 1 for vocab, 2 for code */
   front: {
     type: String,
-    unique: true,
     trim: true,
     required: 'Please supply a front content'
   },
   back: {
     type: String,
-    unique: true,
     trim: true,
     required: 'Please supply a back content'
   },
